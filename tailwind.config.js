@@ -5,4 +5,13 @@ export default {
     extend: {},
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "cyberpunk"],
+  },
 };
+// module.exports = {
+//   //...
+//   daisyui: {
+//     themes: ["light", "dark", "cupcake"],
+//   },
+// };
