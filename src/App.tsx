@@ -3,7 +3,10 @@ import "./App.scss";
 function App() {
   return (
     /*html*/ <>
-      <main className=" flex flex-col h-screen w-screen items-center text-center ">
+      <header className="sticky top-0 z-10">
+        <nav className="block bg-white h-32  w-screen"></nav>
+      </header>
+      <main className=" flex flex-col w-screen items-center text-center ">
         <section className="container mt-24 mb-24">
           <h1 className="text-cyan-200 text-7xl">This is a daisy ui site</h1>
         </section>
@@ -104,7 +107,7 @@ function App() {
           </div>
         </section>
         <section>
-          <div className="collapse collapse-plus bg-base-200">
+          <div className="collapse collapse-plus bg-base-200 mt-10">
             <input type="radio" name="my-accordion-3" />
             <div className="collapse-title text-xl font-medium">
               Click to open this one and close others
@@ -142,50 +145,92 @@ function App() {
           </div>
         </section>
         <section>
-          <div className="carousel carousel-end rounded-box">
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://placehold.co/600x400/000000/FFFFFF/png"
-                alt="Drink"
-              />
-            </div>
+          <div className="carousel carousel-end rounded-box bg-slate-50 gap-5 mt-10 w-[90%]">
+            <img
+              id="item1"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item2"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item3"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item4"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item5"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item6"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
+            <img
+              id="item7"
+              className="carousel-item "
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="Drink"
+            />
           </div>
+          <div className="mb-10">
+            <a href="#item1" className="btn btn-xs">
+              1
+            </a>
+            <a href="#item2" className="btn btn-xs">
+              2
+            </a>
+            <a href="#item3" className="btn btn-xs">
+              3
+            </a>
+            <a href="#item4" className="btn btn-xs">
+              4
+            </a>
+            <a href="#item5" className="btn btn-xs">
+              5
+            </a>
+            <a href="#item6" className="btn btn-xs">
+              6
+            </a>
+            <a href="#item7" className="btn btn-xs">
+              7
+            </a>
+          </div>
+        </section>
+        <section>
+          {/* Open the modal using ID.showModal() method */}
+          <button className="btn" onClick={() => window.my_modal_1.showModal()}>
+            open modal
+          </button>
+          <dialog id="my_modal_1" className="modal">
+            <form
+              method="dialog"
+              className="modal-box flex-col flex items-center"
+            >
+              <h3 className="font-bold text-lg">Hello!</h3>
+              <img src="./never-gonna.gif" alt="" />
+              <div className="modal-action">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn">Close</button>
+              </div>
+            </form>
+          </dialog>
         </section>
       </main>
     </>
