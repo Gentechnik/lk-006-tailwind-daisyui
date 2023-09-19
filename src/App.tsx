@@ -1,4 +1,5 @@
 import "./App.scss";
+import result from "./assets/random";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
         <nav className="block bg-white h-32  w-screen"></nav>
       </header>
       <main className=" flex flex-col w-screen items-center text-center ">
-        <section className="container mt-24 mb-24">
+        {/* <section className="container mt-24 mb-24">
           <h1 className="text-cyan-200 text-7xl">This is a daisy ui site</h1>
         </section>
         <section className="container w-[70%]">
@@ -46,7 +47,7 @@ function App() {
         </section>
         <section>
           <label className="swap swap-flip text-9xl">
-            {/* this hidden checkbox controls the state */}
+         
             <input type="checkbox" />
 
             <div className="swap-on">🥶</div>
@@ -212,27 +213,16 @@ function App() {
               7
             </a>
           </div>
-        </section>
-        <section>
-          {/* Open the modal using ID.showModal() method */}
-          <button className="btn" onClick={() => window.my_modal_1.showModal()}>
-            open modal
-          </button>
-          <dialog id="my_modal_1" className="modal">
-            <form
-              method="dialog"
-              className="modal-box flex-col flex items-center"
-            >
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <img src="./never-gonna.gif" alt="" />
-              <div className="modal-action">
-                {/* if there is a button in form, it will close the modal */}
-                <button className="btn">Close</button>
-              </div>
-            </form>
-          </dialog>
-        </section>
+        </section> */}
       </main>
+      <aside className="flex flex-col items-center mt-4">
+        {/* <h2>To-Do List</h2>
+        <form className="outline-2-red">
+          <p>this is a test</p>
+          <input type="text" name="newToDo" id="newToDo" />
+        </form> */}
+        <div> {}</div>
+      </aside>
     </>
   );
 }
